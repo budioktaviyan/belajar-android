@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Belajar Android</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="text_home">Home</string>
+    <string name="text_detail">Detail</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_detail">Detail</string>
 </resources>

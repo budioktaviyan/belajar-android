@@ -7,23 +7,47 @@
     tools:context="com.baculsoft.belajarandroid.views.activities.MainActivity"
     tools:targetApi="LOLLIPOP">
 
-    <RelativeLayout
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/dl_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.design.widget.AppBarLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:elevation="4dp"
-            android:minHeight="?attr/actionBarSize">
+            android:layout_height="match_parent">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar_main"
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/abl_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:theme="@style/AppTheme.Toolbar"
-                app:titleTextAppearance="@style/AppTheme.ToolbarTitle" />
-        </android.support.design.widget.AppBarLayout>
-    </RelativeLayout>
+                android:background="@color/colorAccent"
+                android:elevation="4dp"
+                android:minHeight="?attr/actionBarSize">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:theme="@style/AppTheme.Toolbar"
+                    app:titleTextAppearance="@style/AppTheme.ToolbarTitle" />
+            </android.support.design.widget.AppBarLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/abl_main" />
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/view_navigation_header"
+            app:itemBackground="@drawable/bg_menu"
+            app:itemIconTint="@color/colorPrimaryDark"
+            app:itemTextColor="@color/colorPrimaryDark"
+            app:menu="@menu/menu_main" />
+    </android.support.v4.widget.DrawerLayout>
 </android.support.design.widget.CoordinatorLayout>
