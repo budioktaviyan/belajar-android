@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment {
 
         final RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.rv_home);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        final HomeAdapter homeAdapter = new HomeAdapter(items);
+        final HomeAdapter homeAdapter = new HomeAdapter(getContext(), items);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.smoothScrollToPosition(recyclerView.getBottom());
         recyclerView.setAdapter(homeAdapter);
